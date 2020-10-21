@@ -25,3 +25,17 @@ spring:
           # 使用"Path Route Predicate Factory"，规则为/pay开头的任意URI
           predicates:
           - Path=/read/**
+      default-filters:
+        - name: Hystrix
+          args:
+            name: default
+            fallbackUri: 'forward:/defaultFallback'
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          # 超时熔断策略 2000ms
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 2000
