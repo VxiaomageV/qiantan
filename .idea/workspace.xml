@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4ad0cda-c6a7-4e1c-84b9-fff96c51ad6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/qt/gateway/controller/FallbackController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/qt/gateway/route/NacosDynamicRouteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/read/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read/src/main/java/com/qt/read/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/read/src/main/java/com/qt/read/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/read/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/read/src/main/resources/bootstrap.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vip/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vip/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vip/src/main/java/com/qt/vip/feign/BalanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vip/src/main/java/com/qt/vip/feign/BalanceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vip/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vip/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vip/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vip/src/main/resources/bootstrap.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,11 +63,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qt.gateway.route" />
       <recent name="com.qt.vip.feign" />
       <recent name="com.qt.vip.feign.dto" />
       <recent name="com.qt.vip.vo" />
       <recent name="com.qt.read.vo" />
-      <recent name="com.qt.read.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\project\sc\BriefTalk\vip\src\main\resources" />
@@ -125,7 +129,9 @@
       <workItem from="1603205994482" duration="5109000" />
       <workItem from="1603212995189" duration="138000" />
       <workItem from="1603213187935" duration="42000" />
-      <workItem from="1603213368376" duration="31011000" />
+      <workItem from="1603213368376" duration="31306000" />
+      <workItem from="1603288339600" duration="12310000" />
+      <workItem from="1603329339735" duration="6310000" />
     </task>
     <servers />
   </component>
@@ -137,10 +143,58 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/qt/gateway/route/NacosDynamicRouteService.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/qt/gateway/route/NacosDynamicRouteService.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/qt/gateway/route/NacosDynamicRouteService.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/qt/gateway/route/NacosDynamicRouteService.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/qt/gateway/route/NacosDynamicRouteService.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/qt/gateway/route/NacosDynamicRouteService.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/qt/gateway/route/NacosDynamicRouteService.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/qt/gateway/route/NacosDynamicRouteService.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

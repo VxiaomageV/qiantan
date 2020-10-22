@@ -18,7 +18,7 @@ public interface BalanceService {
      * creat: mal
      * date: 2020/10/21
      */
-    @GetMapping(value = "/read/pay/balance")
+    @GetMapping(value = "/pay/balance")
     Balance getBalance(@RequestParam("id") Integer id);
 
 }

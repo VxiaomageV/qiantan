@@ -13,6 +13,22 @@ spring:
       discovery:
         server-addr: 139.9.181.10:8848
         namespace: 3bdb5825-f009-4932-8a77-050721e882e3
+    # sentinel降级
+    sentinel:
+      eager: true
+      transport:
+        dashboard: localhost:8080
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 139.9.181.10:8848
+            namespace: 3bdb5825-f009-4932-8a77-050721e882e3
+            dataId: ${spring.application.name}-degrade-rules
+            data-type: json
+            rule-type: degrade
+ribbon:
+  ConnectTimeout: 2000
+  ReadTimeout: 5000
 feign:
   sentinel:
     enabled: true
