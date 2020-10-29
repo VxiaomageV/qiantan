@@ -13,14 +13,17 @@ spring:
       discovery:
         server-addr: 139.9.181.10:8848
         namespace: 3bdb5825-f009-4932-8a77-050721e882e3
+    # 限流保护
     sentinel:
       datasource:
-        # 任意设置数据库
+        # 任意设置数据库名
         ds1:
           # 使用Nacos作为数据源
           nacos:
             server-addr: 139.9.181.10:8848
             namespace: 3bdb5825-f009-4932-8a77-050721e882e3
+            # 配置文件名称
             dataId: ${spring.application.name}-flow-rules
+            # 配置格式
             data-type: json
             rule-type: flow

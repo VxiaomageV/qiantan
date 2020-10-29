@@ -9,14 +9,14 @@ spring:
       discovery:
         server-addr: 139.9.181.10:8848
         namespace: 3bdb5825-f009-4932-8a77-050721e882e3
-#    gateway:
-#      discovery:
-#        # 路由配置
-#        locator:
-#          # 开启默认路由设置
-#          enabled: true
-#          # 当注册服务名为大写字母时 任然必须用注册名小写字母为前缀访问
-#          lower-case-service-id: true
+    gateway:
+      discovery:
+        # 路由配置
+        locator:
+          # 开启默认路由设置
+          enabled: true
+          # 当注册服务名为大写字母时 任然必须用注册名小写字母为前缀访问
+          lower-case-service-id: true
 #      routes:
 #        # 值随意，方便记忆并且在所有路由定义中唯一即可
 #        - id: read-router
