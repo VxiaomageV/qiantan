@@ -8,6 +8,8 @@
         <option value="$PROJECT_DIR$/read/pom.xml" />
         <option value="$PROJECT_DIR$/vip/pom.xml" />
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/community/pom.xml" />
+        <option value="$PROJECT_DIR$/share/pom.xml" />
       </list>
     </option>
   </component>

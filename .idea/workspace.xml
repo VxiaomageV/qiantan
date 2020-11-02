@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4ad0cda-c6a7-4e1c-84b9-fff96c51ad6a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/share/src/main/java/com/qt/share/controller/Api.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/read/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/read/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/read/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/read/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vip/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vip/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vip/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +57,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vip/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/share/src/main/java/com/qt/share/dto" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -63,6 +73,7 @@
       <recent name="com.qt.read.vo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\sc\BriefTalk\share\src\main\java\com\qt\share\dto" />
       <recent name="D:\project\sc\BriefTalk\vip\src\main\resources" />
       <recent name="D:\project\sc\BriefTalk\vip\src\main\java\com\qt\vip" />
     </key>
@@ -79,7 +90,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayApplication">
+  <component name="RunManager" selected="Spring Boot.ShareApplication">
+    <configuration name="CommunityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="community" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qt.community.CommunityApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.qt.gateway.GatewayApplication" />
@@ -95,6 +113,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShareApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="share" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qt.share.ShareApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VipApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="vip" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.qt.vip.VipApplication" />
@@ -106,6 +131,8 @@
       <item itemvalue="Spring Boot.ReadApplication" />
       <item itemvalue="Spring Boot.VipApplication" />
       <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.CommunityApplication" />
+      <item itemvalue="Spring Boot.ShareApplication" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -127,6 +154,13 @@
       <workItem from="1603329339735" duration="15692000" />
       <workItem from="1603442020148" duration="4207000" />
       <workItem from="1603761933800" duration="2079000" />
+      <workItem from="1603933556392" duration="21722000" />
+      <workItem from="1603980055079" duration="1808000" />
+      <workItem from="1604025632879" duration="2713000" />
+      <workItem from="1604047532720" duration="523000" />
+      <workItem from="1604048159848" duration="1787000" />
+      <workItem from="1604050076085" duration="389000" />
+      <workItem from="1604051790956" duration="2659000" />
     </task>
     <servers />
   </component>
@@ -174,7 +208,37 @@
           <line>96</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/share/src/main/java/com/qt/share/service/MQ.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/share/src/main/java/com/qt/share/controller/Api.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/share/src/main/java/com/qt/share/service/MQ.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/share/src/main/java/com/qt/share/service/MQ.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/share/src/main/java/com/qt/share/service/MQ.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="bulletin" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
