@@ -8,10 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="share" />
-        <module name="vip" />
-        <module name="read" />
-        <module name="gateway" />
         <module name="community" />
+        <module name="vip" />
+        <module name="gateway" />
+        <module name="read" />
       </profile>
     </annotationProcessing>
   </component>
