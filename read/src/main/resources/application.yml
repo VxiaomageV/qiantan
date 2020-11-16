@@ -6,3 +6,5 @@ server:
 #  servlet:
 #    context-path: /read
 sleep: 0
+swagger:
+  open: true
