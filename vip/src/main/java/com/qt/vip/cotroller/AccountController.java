@@ -3,6 +3,8 @@ package com.qt.vip.cotroller;
 
 import com.qt.vip.feign.BalanceService;
 import com.qt.vip.vo.User;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +19,7 @@ import java.util.Map;
  * @author wuyanzu
  */
 @RestController
+@Api(tags = {"vip-test"})
 public class AccountController {
 
     final static Map<Integer, User> userMap = new HashMap() {
@@ -31,6 +34,7 @@ public class AccountController {
     BalanceService balanceService;
 
     @GetMapping("/acc/user")
+    @ApiOperation(value = "测试一下", notes = "测试数据")
     public User getUser(@RequestParam Integer id) {
         if (id != null && userMap.containsKey(id)) {
             User user = userMap.get(id);
