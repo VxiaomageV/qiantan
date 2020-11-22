@@ -1,4 +1,4 @@
-package com.qt.common.config;
+package com.qt.config.properties;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.context.annotation.Bean;

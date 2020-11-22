@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qt.vip.user.mapper.UserMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, nickname, real_name, phone, password, sex, user_intro, user_portrait, birthday, address, card, school, certify, is_valid, create_time, update_time
+    </sql>
+
+    <select id="getUserById" resultType="com.qt.vip.user.vo.UserQueryVo">
+        select
+        <include refid="Base_Column_List"/>
+        from user where id = #{id}
+    </select>
+
+    <select id="getUserPageList" parameterType="com.qt.vip.user.param.UserPageParam" resultType="com.qt.vip.user.vo.UserQueryVo">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+    </select>
+
+</mapper>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+<!--    <parent>-->
+<!--        <groupId>io.geekidea.springbootplus</groupId>-->
+<!--        <artifactId>parent</artifactId>-->
+<!--        <version>2.0</version>-->
+<!--    </parent>-->
+
+    <parent>
+        <groupId>com.qt</groupId>
+        <artifactId>common</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath></relativePath> <!-- lookup parent from repository -->
+    </parent>
+
+    <artifactId>generator</artifactId>
+    <name>generator</name>
+    <description>代码生成器模块</description>
+
+    <dependencies>
+<!--        <dependency>-->
+<!--            <groupId>io.geekidea.springbootplus</groupId>-->
+<!--            <artifactId>framework</artifactId>-->
+<!--        </dependency>-->
+        <!-- mybatis-plus begin -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.3.1</version>
+        </dependency>
+        <!-- mybatis-plus end -->
+        <!-- MySQL begin -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!-- MySQL end -->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>3.3.1</version>
+        </dependency>
+    </dependencies>
+
+</project>

@@ -1,4 +1,4 @@
-package com.qt.common.constant;
+package com.qt.config.constant;
 
 /**
  * @author mal
