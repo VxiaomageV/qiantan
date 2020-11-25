@@ -27,12 +27,10 @@
         <utf8>UTF-8</utf8>
         <java.version>1.8</java.version>
         <sentinel-datasource-nacos.version>1.6.0</sentinel-datasource-nacos.version>
-<!--        <alibaba.version>0.9.0.RELEASE</alibaba.version>-->
         <version>1.6.0</version>
         <swagger2.version>2.9.2</swagger2.version>
         <lombok.version>1.18.12</lombok.version>
         <mapstruct.version>1.3.1.Final</mapstruct.version>
-<!--        <autoconfigure.version>2.1.1.RELEASE</autoconfigure.version>-->
 
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
@@ -105,14 +103,6 @@
                 <artifactId>sentinel-datasource-nacos</artifactId>
                 <version>${sentinel-datasource-nacos.version}</version>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.cloud</groupId>-->
-<!--                <artifactId>spring-cloud-starter-alibaba</artifactId>-->
-<!--                <version>${alibaba.version}</version>-->
-<!--                <type>pom</type>-->
-<!--                <scope>import</scope>-->
-<!--            </dependency>-->
-            <!-- spring-cloud-alibaba end-->
             <!-- swagger start -->
             <!-- 引入swagger-models是为了防止swagger报NumberFormatException异常 -->
             <dependency>
@@ -142,13 +132,6 @@
                 <artifactId>jersey-apache-client4</artifactId>
                 <version>1.19.4</version>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-autoconfigure</artifactId>-->
-<!--                <version>${autoconfigure.version}</version>-->
-<!--                <scope>compile</scope>-->
-<!--            </dependency>-->
-
 
             <!-- 项目模块start -->
             <dependency>
