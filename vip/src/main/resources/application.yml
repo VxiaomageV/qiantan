@@ -3,5 +3,8 @@ spring:
     active: dev
 server:
   port: 8083
-#  servlet:
-  #    context-path: /vip
+# Nacos 注册中心客户端心跳日志禁用 get changedGroupKeys:[] 刷屏
+logging:
+  level:
+    com.alibaba.nacos.client.config.impl: WARN
+
