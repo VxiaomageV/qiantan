@@ -3,7 +3,7 @@ package com.qt.vip.user.feign;
 import com.qt.common.api.ApiResult;
 import com.qt.common.config.FeignConfiguration;
 import com.qt.common.pagination.Paging;
-import com.qt.vip.user.api.feign.factory.UserClientFallbackFactory;
+import com.qt.vip.user.feign.factory.UserClientFallbackFactory;
 import com.qt.vip.user.entity.User;
 import com.qt.vip.user.query.UserPageQuery;
 import org.springframework.cloud.openfeign.FeignClient;

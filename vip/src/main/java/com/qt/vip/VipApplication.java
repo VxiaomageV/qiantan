@@ -1,5 +1,6 @@
 package com.qt.vip;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -15,6 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableDiscoveryClient
 @EnableFeignClients
 @EnableSwagger2
+@MapperScan({"com.qt.**.mapper", "com.qt.vip.**.mapper"})
 public class VipApplication {
 
     public static void main(String[] args) {

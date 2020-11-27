@@ -1,18 +1,18 @@
 package com.qt.vip.user.controller;
 
+import com.qt.common.api.ApiResult;
+import com.qt.common.controller.BaseController;
+import com.qt.common.pagination.Paging;
+import com.qt.common.validator.groups.Add;
+import com.qt.common.validator.groups.Update;
 import com.qt.vip.user.entity.User;
+import com.qt.vip.user.query.UserPageQuery;
 import com.qt.vip.user.service.UserService;
-import lombok.extern.slf4j.Slf4j;
-import com.qt.vip.user.api.query.UserPageQuery;
-import io.geekidea.cloud.common.core.controller.BaseController;
-import io.geekidea.cloud.common.core.api.ApiResult;
-import io.geekidea.cloud.common.core.pagination.Paging;
-import io.geekidea.cloud.common.core.validator.groups.Add;
-import io.geekidea.cloud.common.core.validator.groups.Update;
-import org.springframework.validation.annotation.Validated;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 /**
