@@ -33,12 +33,12 @@ public class ScpGenerator {
 //                .setMavenApiModuleName("scp-example-api")
 //                .setMavenServerModuleName("scp-example-server")
                 .setParentPackage("com.qt.vip")
-                .setModuleName("user")
+                .setModuleName("proposal")
                 .setAuthor("mal")
                 .setFileOverride(true);
 
         // 设置表信息
-        generatorProperties.addTable("user", "id");
+        generatorProperties.addTable("proposal", "id");
 
         // 设置表前缀
         // generatorProperties.setTablePrefix(Arrays.asList("tb_"));
@@ -61,7 +61,7 @@ public class ScpGenerator {
                 .setGeneratorMapper(true)
                 .setGeneratorMapperXml(true)
                 .setGeneratorPageQuery(true)
-                .setGeneratorVo(false)
+                .setGeneratorVo(true)
                 .setPageListOrder(true)
                 .setParamValidation(true)
                 .setSwaggerTags(true)

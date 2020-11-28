@@ -183,19 +183,19 @@ public interface GeneratorConstant {
     /**
      * 自定义继承的Entity类全称，带包名
      */
-    String SUPER_ENTITY_CLASS = "io.geekidea.cloud.common.core.entity.BaseEntity";
+    String SUPER_ENTITY_CLASS = "com.qt.common.entity.BaseEntity";
     /**
      * 自定义继承的Controller类全称，带包名
      */
-    String SUPER_CONTROLLER_CLASS = "io.geekidea.cloud.common.core.controller.BaseController";
+    String SUPER_CONTROLLER_CLASS = "com.qt.common.controller.BaseController";
     /**
      * 自定义继承的Service类全称，带包名
      */
-    String SUPER_SERVICE_CLASS = "io.geekidea.cloud.common.core.service.BaseService";
+    String SUPER_SERVICE_CLASS = "com.qt.common.service.BaseService";
     /**
      * 自定义继承的ServiceImpl类全称，带包名
      */
-    String SUPER_SERVICE_IMPL_CLASS = "io.geekidea.cloud.common.core.service.impl.BaseServiceImpl";
+    String SUPER_SERVICE_IMPL_CLASS = "com.qt.common.service.impl.BaseServiceImpl";
     /**
      * 分页参数父类全称，带包名
      */
@@ -203,33 +203,33 @@ public interface GeneratorConstant {
     /**
      * 分页排序参数父类全称，带包名
      */
-    String SUPER_PAGE_ORDER_PARAM_CLASS = "io.geekidea.cloud.common.core.pagination.BasePageOrderQuery";
+    String SUPER_PAGE_ORDER_PARAM_CLASS = "com.qt.common.pagination.BasePageOrderQuery";
     /**
      * 公共id参数类全称，带包名
      */
-    String ID_PARAM_CLASS = "io.geekidea.cloud.common.core.dto.param.IdParam";
+    String ID_PARAM_CLASS = "com.qt.common.dto.param.IdParam";
     /**
      * 分页对象类全称，带包名
      */
-    String PAGING_CLASS = "io.geekidea.cloud.common.core.pagination.Paging";
+    String PAGING_CLASS = "com.qt.common.pagination.Paging";
     /**
      * 分页信息类全称，带包名
      */
-    String PAGE_INFO_CLASS = "io.geekidea.cloud.common.core.pagination.PageInfo";
+    String PAGE_INFO_CLASS = "com.qt.common.pagination.PageInfo";
     /**
      * 公共结果类全称，带包名
      */
-    String API_RESULT_CLASS = "io.geekidea.cloud.common.core.api.ApiResult";
+    String API_RESULT_CLASS = "com.qt.common.api.ApiResult";
     /**
      * 分组验证Add.class类路径
      */
-    String VALIDATOR_ADD_PACKAGE = "io.geekidea.cloud.common.core.validator.groups.Add";
+    String VALIDATOR_ADD_PACKAGE = "com.qt.common.validator.groups.Add";
     /**
      * 分组验证Update.class类路径
      */
-    String VALIDATOR_UPDATE_PACKAGE = "io.geekidea.cloud.common.core.validator.groups.Update";
+    String VALIDATOR_UPDATE_PACKAGE = "com.qt.common.validator.groups.Update";
     /**
      * Feign config类路径
      */
-    String FEIGN_CONFIG_PACKAGE = "io.geekidea.cloud.framework.config.feign.FeignConfiguration";
+    String FEIGN_CONFIG_PACKAGE = "com.qt.common.config.FeignConfiguration";
 }

@@ -268,13 +268,13 @@ public class CodeGenerator {
                     isImportVoPackage = true;
                 }
 
-                String feignClientPackage = parentPackage + StringPool.DOT + moduleName + StringPool.DOT + GeneratorConstant.API + StringPool.DOT + GeneratorConstant.FEIGN;
-                String feignClientFactoryPackage = parentPackage + StringPool.DOT + moduleName + StringPool.DOT + GeneratorConstant.API + StringPool.DOT + GeneratorConstant.FEIGN + StringPool.DOT + GeneratorConstant.FACTORY;
-                String feignClientFallbackPackage = parentPackage + StringPool.DOT + moduleName + StringPool.DOT + GeneratorConstant.API + StringPool.DOT + GeneratorConstant.FEIGN + StringPool.DOT + GeneratorConstant.FALLBACK;
+                String feignClientPackage = parentPackage + StringPool.DOT + moduleName + StringPool.DOT + GeneratorConstant.FEIGN;
+                String feignClientFactoryPackage = parentPackage + StringPool.DOT + moduleName + StringPool.DOT + GeneratorConstant.FEIGN + StringPool.DOT + GeneratorConstant.FACTORY;
+                String feignClientFallbackPackage = parentPackage + StringPool.DOT + moduleName + StringPool.DOT + GeneratorConstant.FEIGN + StringPool.DOT + GeneratorConstant.FALLBACK;
 
                 Map<String, Object> map = new HashMap<>();
                 // 查询参数包路径
-                String pageQueryPackage = parentPackage + finalModuleName + StringPool.DOT + GeneratorConstant.API + StringPool.DOT + GeneratorConstant.QUERY;
+                String pageQueryPackage = parentPackage + finalModuleName + StringPool.DOT + GeneratorConstant.QUERY;
                 map.put("pageQueryPackage", pageQueryPackage);
                 // 查询参数类路径
                 map.put("pageQueryClass", pageQueryPackage + StringPool.DOT + entityName + GeneratorConstant.PAGE_QUERY);
@@ -284,7 +284,7 @@ public class CodeGenerator {
                 // 查询参数共公包路径
                 map.put("idParamClass", idParamClass);
                 // 响应结果包路径
-                String voPackage = parentPackage + finalModuleName + StringPool.DOT + GeneratorConstant.API + StringPool.DOT + GeneratorConstant.VO;
+                String voPackage = parentPackage + finalModuleName + StringPool.DOT + GeneratorConstant.VO;
                 map.put("voPackage", voPackage);
                 // 响应结果类路径
                 map.put("voClass", voPackage + StringPool.DOT + entityName + GeneratorConstant.VO_SUFFIX);
