@@ -1,8 +1,8 @@
 package com.qt.community.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.qt.community.entity.Group;
-import com.qt.community.query.GroupPageQuery;
+import com.qt.community.entity.DiscussGroup;
+import com.qt.community.query.DiscussGroupPageQuery;
 
 import org.springframework.stereotype.Repository;
 
@@ -18,7 +18,7 @@ import java.io.Serializable;
  * @since 2020-11-30
  */
 @Repository
-public interface GroupMapper extends BaseMapper<Group> {
+public interface DiscussGroupMapper extends BaseMapper<DiscussGroup> {
 
 
 }

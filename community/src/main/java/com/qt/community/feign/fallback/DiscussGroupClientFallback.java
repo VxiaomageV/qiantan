@@ -1,8 +1,8 @@
 package com.qt.community.feign.fallback;
 
-import com.qt.community.entity.Group;
-import com.qt.community.feign.GroupClient;
-import com.qt.community.query.GroupPageQuery;
+import com.qt.community.entity.DiscussGroup;
+import com.qt.community.feign.DiscussGroupClient;
+import com.qt.community.query.DiscussGroupPageQuery;
 import com.qt.common.api.ApiResult;
 import com.qt.common.pagination.Paging;
 import lombok.Setter;
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component
-public class GroupClientFallback implements GroupClient {
+public class DiscussGroupClientFallback implements DiscussGroupClient {
 
     @Setter
     private Throwable throwable;
@@ -26,7 +26,7 @@ public class GroupClientFallback implements GroupClient {
      * 添加讨论组主表
      */
     @Override
-    public ApiResult<Boolean> addGroup(Group group) throws Exception {
+    public ApiResult<Boolean> addDiscussGroup(DiscussGroup discussGroup) throws Exception {
         log.error("错误原因：", throwable);
         return ApiResult.fail();
     }
@@ -35,7 +35,7 @@ public class GroupClientFallback implements GroupClient {
      * 修改讨论组主表
      */
     @Override
-    public ApiResult<Boolean> updateGroup(Group group) throws Exception {
+    public ApiResult<Boolean> updateDiscussGroup(DiscussGroup discussGroup) throws Exception {
         log.error("错误原因：", throwable);
         return ApiResult.fail();
     }
@@ -44,7 +44,7 @@ public class GroupClientFallback implements GroupClient {
      * 删除讨论组主表
      */
     @Override
-    public ApiResult<Boolean> deleteGroup(Long id) throws Exception {
+    public ApiResult<Boolean> deleteDiscussGroup(Long id) throws Exception {
         log.error("错误原因：", throwable);
         return ApiResult.fail();
     }
@@ -53,7 +53,7 @@ public class GroupClientFallback implements GroupClient {
      * 获取讨论组主表详情
      */
     @Override
-    public ApiResult<Group> getGroup(Long id) throws Exception {
+    public ApiResult<DiscussGroup> getDiscussGroup(Long id) throws Exception {
         log.error("错误原因：", throwable);
         return ApiResult.fail();
     }
@@ -62,7 +62,7 @@ public class GroupClientFallback implements GroupClient {
      * 讨论组主表分页列表
      */
     @Override
-    public ApiResult<Paging<Group>> getGroupPageList(GroupPageQuery groupPageQuery) throws Exception {
+    public ApiResult<Paging<DiscussGroup>> getDiscussGroupPageList(DiscussGroupPageQuery discussGroupPageQuery) throws Exception {
         log.error("错误原因：", throwable);
         return ApiResult.fail();
     }

@@ -1,35 +1,27 @@
-package com.qt.community.entity;
+package com.qt.community.vo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import java.util.Date;
-import com.qt.common.entity.BaseEntity;
-import com.baomidou.mybatisplus.annotation.Version;
-import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import com.qt.common.validator.groups.Update;
+import java.io.Serializable;
+import java.util.Date;
 
 /**
- * 讨论组主表
+ * <pre>
+ * 讨论组主表 查询结果对象
+ * </pre>
  *
  * @author mal
- * @since 2020-11-30
+ * @date 2020-11-30
  */
 @Data
 @Accessors(chain = true)
-@EqualsAndHashCode(callSuper = true)
-@ApiModel(value = "Group对象")
-public class Group extends BaseEntity {
+@ApiModel(value = "DiscussGroup对象")
+public class DiscussGroupVo implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    @NotNull(message = "id不能为空", groups = {Update.class})
     @ApiModelProperty("id")
-    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     @ApiModelProperty("讨论组名字")
@@ -61,5 +53,4 @@ public class Group extends BaseEntity {
 
     @ApiModelProperty("更新时间")
     private Date updateTime;
-
 }

@@ -18,6 +18,6 @@ import com.qt.common.pagination.BasePageOrderQuery;
 @Accessors(chain = true)
 @EqualsAndHashCode(callSuper = true)
 @ApiModel(value = "讨论组主表分页查询")
-public class GroupPageQuery extends BasePageOrderQuery {
+public class DiscussGroupPageQuery extends BasePageOrderQuery {
     private static final long serialVersionUID = 1L;
 }

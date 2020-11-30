@@ -1,9 +1,9 @@
 package com.qt.community.controller;
 
-import com.qt.community.entity.Group;
-import com.qt.community.service.GroupService;
+import com.qt.community.entity.DiscussGroup;
+import com.qt.community.service.DiscussGroupService;
 import lombok.extern.slf4j.Slf4j;
-import com.qt.community.query.GroupPageQuery;
+import com.qt.community.query.DiscussGroupPageQuery;
 import com.qt.common.controller.BaseController;
 import com.qt.common.api.ApiResult;
 import com.qt.common.pagination.Paging;
@@ -23,21 +23,21 @@ import org.springframework.web.bind.annotation.*;
  */
 @Slf4j
 @RestController
-@RequestMapping("/group")
+@RequestMapping("/discussGroup")
 @Api(value = "讨论组主表API", tags = {"讨论组主表"})
 
-public class GroupController extends BaseController {
+public class DiscussGroupController extends BaseController {
 
     @Autowired
-    private GroupService groupService;
+    private DiscussGroupService discussGroupService;
 
     /**
      * 添加讨论组主表
      */
     @PostMapping("/add")
     @ApiOperation(value = "添加讨论组主表", response = ApiResult.class)
-    public ApiResult<Boolean> addGroup(@Validated(Add.class) @RequestBody Group group) throws Exception {
-        boolean flag = groupService.saveGroup(group);
+    public ApiResult<Boolean> addDiscussGroup(@Validated(Add.class) @RequestBody DiscussGroup discussGroup) throws Exception {
+        boolean flag = discussGroupService.saveDiscussGroup(discussGroup);
         return ApiResult.result(flag);
     }
 
@@ -46,8 +46,8 @@ public class GroupController extends BaseController {
      */
     @PostMapping("/update")
     @ApiOperation(value = "修改讨论组主表", response = ApiResult.class)
-    public ApiResult<Boolean> updateGroup(@Validated(Update.class) @RequestBody Group group) throws Exception {
-        boolean flag = groupService.updateGroup(group);
+    public ApiResult<Boolean> updateDiscussGroup(@Validated(Update.class) @RequestBody DiscussGroup discussGroup) throws Exception {
+        boolean flag = discussGroupService.updateDiscussGroup(discussGroup);
         return ApiResult.result(flag);
     }
 
@@ -56,8 +56,8 @@ public class GroupController extends BaseController {
      */
     @PostMapping("/delete/{id}")
     @ApiOperation(value = "删除讨论组主表", response = ApiResult.class)
-    public ApiResult<Boolean> deleteGroup(@PathVariable("id") Long id) throws Exception {
-        boolean flag = groupService.deleteGroup(id);
+    public ApiResult<Boolean> deleteDiscussGroup(@PathVariable("id") Long id) throws Exception {
+        boolean flag = discussGroupService.deleteDiscussGroup(id);
         return ApiResult.result(flag);
     }
 
@@ -65,19 +65,19 @@ public class GroupController extends BaseController {
      * 获取讨论组主表详情
      */
     @GetMapping("/info/{id}")
-    @ApiOperation(value = "讨论组主表详情", response = Group.class)
-    public ApiResult<Group> getGroup(@PathVariable("id") Long id) throws Exception {
-        Group group = groupService.getById(id);
-        return ApiResult.ok(group);
+    @ApiOperation(value = "讨论组主表详情", response = DiscussGroup.class)
+    public ApiResult<DiscussGroup> getDiscussGroup(@PathVariable("id") Long id) throws Exception {
+        DiscussGroup discussGroup = discussGroupService.getById(id);
+        return ApiResult.ok(discussGroup);
     }
 
     /**
      * 讨论组主表分页列表
      */
     @PostMapping("/page")
-    @ApiOperation(value = "讨论组主表分页列表", response = Group.class)
-    public ApiResult<Paging<Group>> getGroupPageList(@Validated @RequestBody GroupPageQuery groupPageQuery) throws Exception {
-        Paging<Group> paging = groupService.getGroupPageList(groupPageQuery);
+    @ApiOperation(value = "讨论组主表分页列表", response = DiscussGroup.class)
+    public ApiResult<Paging<DiscussGroup>> getDiscussGroupPageList(@Validated @RequestBody DiscussGroupPageQuery discussGroupPageQuery) throws Exception {
+        Paging<DiscussGroup> paging = discussGroupService.getDiscussGroupPageList(discussGroupPageQuery);
         return ApiResult.ok(paging);
     }
 
