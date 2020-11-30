@@ -268,9 +268,9 @@ public class CodeGenerator {
                     isImportVoPackage = true;
                 }
 
-                String feignClientPackage = parentPackage + StringPool.DOT + moduleName + StringPool.DOT + GeneratorConstant.FEIGN;
-                String feignClientFactoryPackage = parentPackage + StringPool.DOT + moduleName + StringPool.DOT + GeneratorConstant.FEIGN + StringPool.DOT + GeneratorConstant.FACTORY;
-                String feignClientFallbackPackage = parentPackage + StringPool.DOT + moduleName + StringPool.DOT + GeneratorConstant.FEIGN + StringPool.DOT + GeneratorConstant.FALLBACK;
+                String feignClientPackage = parentPackage + finalModuleName + StringPool.DOT + GeneratorConstant.FEIGN;
+                String feignClientFactoryPackage = parentPackage + finalModuleName + StringPool.DOT + GeneratorConstant.FEIGN + StringPool.DOT + GeneratorConstant.FACTORY;
+                String feignClientFallbackPackage = parentPackage + finalModuleName + StringPool.DOT + GeneratorConstant.FEIGN + StringPool.DOT + GeneratorConstant.FALLBACK;
 
                 Map<String, Object> map = new HashMap<>();
                 // 查询参数包路径
