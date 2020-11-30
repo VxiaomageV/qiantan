@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: community
+  cloud:
+    nacos:
+      # 配置
+      config:
+        # Nacos监听IP和端口
+        server-addr: 139.9.181.10:8848
+        # Nacos命名空间
+        namespace: 3bdb5825-f009-4932-8a77-050721e882e3
+      # 注册
+      discovery:
+        server-addr: 139.9.181.10:8848
+        namespace: 3bdb5825-f009-4932-8a77-050721e882e3

@@ -15,8 +15,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.qt</groupId>
+            <artifactId>common</artifactId>
         </dependency>
     </dependencies>
 

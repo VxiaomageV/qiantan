@@ -28,17 +28,17 @@ public class ScpGenerator {
 
         // 设置基本信息
         generatorProperties
-                .setServerName("vip")
-                .setMavenModuleName("vip")
+                .setServerName("community")
+                .setMavenModuleName("community")
 //                .setMavenApiModuleName("scp-example-api")
 //                .setMavenServerModuleName("scp-example-server")
-                .setParentPackage("com.qt.vip")
-                .setModuleName("proposal")
+                .setParentPackage("com.qt.community")
+//                .setModuleName("book")
                 .setAuthor("mal")
                 .setFileOverride(true);
 
         // 设置表信息
-        generatorProperties.addTable("proposal", "id");
+        generatorProperties.addTable("discuss_group", "id");
 
         // 设置表前缀
         // generatorProperties.setTablePrefix(Arrays.asList("tb_"));
@@ -49,7 +49,7 @@ public class ScpGenerator {
                 .setUsername("root")
                 .setPassword("Teach000")
                 .setDriverName("com.mysql.jdbc.Driver")
-                .setUrl("jdbc:mysql://139.9.68.41:3306/vip?useUnicode=true&characterEncoding=UTF-8&useSSL=false");
+                .setUrl("jdbc:mysql://139.9.68.41:3306/community?useUnicode=true&characterEncoding=UTF-8&useSSL=false");
 
         // 生成配置
         generatorProperties.getGeneratorConfig()
