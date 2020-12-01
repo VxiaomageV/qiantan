@@ -1,8 +1,8 @@
 package com.qt.vip.feign.fallback;
 
-import com.qt.vip.entity.User;
-import com.qt.vip.feign.UserClient;
-import com.qt.vip.query.UserPageQuery;
+import com.qt.vip.entity.Fans;
+import com.qt.vip.feign.FansClient;
+import com.qt.vip.query.FansPageQuery;
 import com.qt.common.api.ApiResult;
 import com.qt.common.pagination.Paging;
 import lombok.Setter;
@@ -10,59 +10,59 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 /**
- * 用户主表 Feign Fallback
+ * 粉丝表 Feign Fallback
  *
  * @author mal
- * @since 2020-12-01
+ * @since 2020-12-02
  */
 @Slf4j
 @Component
-public class UserClientFallback implements UserClient {
+public class FansClientFallback implements FansClient {
 
     @Setter
     private Throwable throwable;
 
     /**
-     * 添加用户主表
+     * 添加粉丝表
      */
     @Override
-    public ApiResult<Boolean> addUser(User user) throws Exception {
+    public ApiResult<Boolean> addFans(Fans fans) throws Exception {
         log.error("错误原因：", throwable);
         return ApiResult.fail();
     }
 
     /**
-     * 修改用户主表
+     * 修改粉丝表
      */
     @Override
-    public ApiResult<Boolean> updateUser(User user) throws Exception {
+    public ApiResult<Boolean> updateFans(Fans fans) throws Exception {
         log.error("错误原因：", throwable);
         return ApiResult.fail();
     }
 
     /**
-     * 删除用户主表
+     * 删除粉丝表
      */
     @Override
-    public ApiResult<Boolean> deleteUser(Long id) throws Exception {
+    public ApiResult<Boolean> deleteFans(Long id) throws Exception {
         log.error("错误原因：", throwable);
         return ApiResult.fail();
     }
 
     /**
-     * 获取用户主表详情
+     * 获取粉丝表详情
      */
     @Override
-    public ApiResult<User> getUser(Long id) throws Exception {
+    public ApiResult<Fans> getFans(Long id) throws Exception {
         log.error("错误原因：", throwable);
         return ApiResult.fail();
     }
 
     /**
-     * 用户主表分页列表
+     * 粉丝表分页列表
      */
     @Override
-    public ApiResult<Paging<User>> getUserPageList(UserPageQuery userPageQuery) throws Exception {
+    public ApiResult<Paging<Fans>> getFansPageList(FansPageQuery fansPageQuery) throws Exception {
         log.error("错误原因：", throwable);
         return ApiResult.fail();
     }

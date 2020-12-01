@@ -13,7 +13,7 @@ import java.util.Date;
  * </pre>
  *
  * @author mal
- * @date 2020-11-30
+ * @date 2020-12-01
  */
 @Data
 @Accessors(chain = true)
@@ -45,6 +45,9 @@ public class UserVo implements Serializable {
     @ApiModelProperty("用户头像地址")
     private String userPortrait;
 
+    @ApiModelProperty("用户背景图地址")
+    private String backImage;
+
     @ApiModelProperty("生日")
     private Date birthday;
 
@@ -68,4 +71,10 @@ public class UserVo implements Serializable {
 
     @ApiModelProperty("更新时间")
     private Date updateTime;
+
+    @ApiModelProperty("关注总人数")
+    private int attentionCount;
+
+    @ApiModelProperty("观众总人数")
+    private int audienceCount;
 }

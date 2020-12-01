@@ -2,6 +2,7 @@ package com.qt.vip.controller;
 
 import com.qt.vip.entity.User;
 import com.qt.vip.service.UserService;
+import com.qt.vip.vo.UserVo;
 import lombok.extern.slf4j.Slf4j;
 import com.qt.vip.query.UserPageQuery;
 import com.qt.common.controller.BaseController;
@@ -19,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
  * 用户主表 控制器
  *
  * @author mal
- * @since 2020-11-30
+ * @since 2020-12-01
  */
 @Slf4j
 @RestController
@@ -79,6 +80,16 @@ public class UserController extends BaseController {
     public ApiResult<Paging<User>> getUserPageList(@Validated @RequestBody UserPageQuery userPageQuery) throws Exception {
         Paging<User> paging = userService.getUserPageList(userPageQuery);
         return ApiResult.ok(paging);
+    }
+
+    /**
+     * 获取我的首页整体信息
+     */
+    @GetMapping("/message")
+    @ApiOperation(value = "我的首页信息详情", response = UserVo.class)
+    public ApiResult<UserVo> getUserMessage() throws Exception{
+        UserVo userVo = userService.getUserMessage();
+        return ApiResult.ok(userVo);
     }
 
 }

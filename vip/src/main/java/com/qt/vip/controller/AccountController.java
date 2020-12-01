@@ -1,4 +1,4 @@
-package com.qt.vip.cotroller;
+package com.qt.vip.controller;
 
 
 import com.qt.vip.feign.BalanceService;

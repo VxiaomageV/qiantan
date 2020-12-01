@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * 用户主表 Feign Client
  *
  * @author mal
- * @since 2020-11-30
+ * @since 2020-12-01
  */
 @FeignClient(name = "vip", path = "/user", fallbackFactory = UserClientFallbackFactory.class, configuration = FeignConfiguration.class)
 public interface UserClient {

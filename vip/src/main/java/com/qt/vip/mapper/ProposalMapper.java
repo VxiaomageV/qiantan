@@ -1,8 +1,8 @@
 package com.qt.vip.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.qt.vip.entity.User;
-import com.qt.vip.query.UserPageQuery;
+import com.qt.vip.entity.Proposal;
+import com.qt.vip.query.ProposalPageQuery;
 
 import org.springframework.stereotype.Repository;
 
@@ -12,13 +12,13 @@ import org.apache.ibatis.annotations.Param;
 import java.io.Serializable;
 
 /**
- * 用户主表 Mapper 接口
+ * 意见反馈表 Mapper 接口
  *
  * @author mal
  * @since 2020-12-01
  */
 @Repository
-public interface UserMapper extends BaseMapper<User> {
+public interface ProposalMapper extends BaseMapper<Proposal> {
 
 
 }
