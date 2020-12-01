@@ -15,16 +15,16 @@ import javax.validation.constraints.NotNull;
 import com.qt.common.validator.groups.Update;
 
 /**
- * 用户主表
+ * 粉丝表
  *
  * @author mal
- * @since 2020-12-01
+ * @since 2020-12-02
  */
 @Data
 @Accessors(chain = true)
 @EqualsAndHashCode(callSuper = true)
-@ApiModel(value = "User对象")
-public class User extends BaseEntity {
+@ApiModel(value = "Fans对象")
+public class Fans extends BaseEntity {
     private static final long serialVersionUID = 1L;
 
     @NotNull(message = "id不能为空", groups = {Update.class})
@@ -32,44 +32,29 @@ public class User extends BaseEntity {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
+    @ApiModelProperty("用户id")
+    private Long userId;
+
     @ApiModelProperty("用户昵称")
-    private String nickname;
+    private String userNickname;
 
-    @ApiModelProperty("真实姓名")
-    private String realName;
-
-    @ApiModelProperty("手机号")
-    private Integer phone;
-
-    @ApiModelProperty("登录密码")
-    private String password;
-
-    @ApiModelProperty("性别")
-    private Integer sex;
-
-    @ApiModelProperty("个人简介")
+    @ApiModelProperty("用户个人简介")
     private String userIntro;
 
     @ApiModelProperty("用户头像地址")
     private String userPortrait;
 
-    @ApiModelProperty("用户背景图地址")
-    private String backImage;
+    @ApiModelProperty("关注的用户id")
+    private Long fansId;
 
-    @ApiModelProperty("生日")
-    private Date birthday;
+    @ApiModelProperty("关注的用户昵称")
+    private String fansNickname;
 
-    @ApiModelProperty("居住地")
-    private String address;
+    @ApiModelProperty("关注的用户个人简介")
+    private String fansIntro;
 
-    @ApiModelProperty("身份证号")
-    private String card;
-
-    @ApiModelProperty("所在院校")
-    private String school;
-
-    @ApiModelProperty("院校证明材料图片地址")
-    private String certify;
+    @ApiModelProperty("关注的用户头像地址")
+    private String fansPortrait;
 
     @ApiModelProperty("状态：1：启用 0：未启用")
     private Boolean isValid;

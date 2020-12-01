@@ -1,8 +1,8 @@
 package com.qt.vip.feign.fallback;
 
-import com.qt.vip.entity.User;
-import com.qt.vip.feign.UserClient;
-import com.qt.vip.query.UserPageQuery;
+import com.qt.vip.entity.Proposal;
+import com.qt.vip.feign.ProposalClient;
+import com.qt.vip.query.ProposalPageQuery;
 import com.qt.common.api.ApiResult;
 import com.qt.common.pagination.Paging;
 import lombok.Setter;
@@ -10,59 +10,59 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 /**
- * 用户主表 Feign Fallback
+ * 意见反馈表 Feign Fallback
  *
  * @author mal
  * @since 2020-12-01
  */
 @Slf4j
 @Component
-public class UserClientFallback implements UserClient {
+public class ProposalClientFallback implements ProposalClient {
 
     @Setter
     private Throwable throwable;
 
     /**
-     * 添加用户主表
+     * 添加意见反馈表
      */
     @Override
-    public ApiResult<Boolean> addUser(User user) throws Exception {
+    public ApiResult<Boolean> addProposal(Proposal proposal) throws Exception {
         log.error("错误原因：", throwable);
         return ApiResult.fail();
     }
 
     /**
-     * 修改用户主表
+     * 修改意见反馈表
      */
     @Override
-    public ApiResult<Boolean> updateUser(User user) throws Exception {
+    public ApiResult<Boolean> updateProposal(Proposal proposal) throws Exception {
         log.error("错误原因：", throwable);
         return ApiResult.fail();
     }
 
     /**
-     * 删除用户主表
+     * 删除意见反馈表
      */
     @Override
-    public ApiResult<Boolean> deleteUser(Long id) throws Exception {
+    public ApiResult<Boolean> deleteProposal(Long id) throws Exception {
         log.error("错误原因：", throwable);
         return ApiResult.fail();
     }
 
     /**
-     * 获取用户主表详情
+     * 获取意见反馈表详情
      */
     @Override
-    public ApiResult<User> getUser(Long id) throws Exception {
+    public ApiResult<Proposal> getProposal(Long id) throws Exception {
         log.error("错误原因：", throwable);
         return ApiResult.fail();
     }
 
     /**
-     * 用户主表分页列表
+     * 意见反馈表分页列表
      */
     @Override
-    public ApiResult<Paging<User>> getUserPageList(UserPageQuery userPageQuery) throws Exception {
+    public ApiResult<Paging<Proposal>> getProposalPageList(ProposalPageQuery proposalPageQuery) throws Exception {
         log.error("错误原因：", throwable);
         return ApiResult.fail();
     }
