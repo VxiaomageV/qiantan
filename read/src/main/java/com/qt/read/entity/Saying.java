@@ -1,20 +1,21 @@
 package com.qt.read.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
+import java.util.Date;
 import com.qt.common.entity.BaseEntity;
-import com.qt.common.validator.groups.Update;
+import com.baomidou.mybatisplus.annotation.Version;
+import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
-
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
+import com.qt.common.validator.groups.Update;
 
 /**
- * 书籍主表表
+ * 名人名言表
  *
  * @author mal
  * @since 2020-12-02
@@ -22,8 +23,8 @@ import java.util.Date;
 @Data
 @Accessors(chain = true)
 @EqualsAndHashCode(callSuper = true)
-@ApiModel(value = "Book对象")
-public class Book extends BaseEntity {
+@ApiModel(value = "Saying对象")
+public class Saying extends BaseEntity {
     private static final long serialVersionUID = 1L;
 
     @NotNull(message = "id不能为空", groups = {Update.class})
@@ -31,29 +32,11 @@ public class Book extends BaseEntity {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-    @ApiModelProperty("书籍名称")
-    private String bookName;
+    @ApiModelProperty("名言作者")
+    private String sayingAuthor;
 
-    @ApiModelProperty("书籍作者")
-    private String bookAuthor;
-
-    @ApiModelProperty("书籍简介")
-    private String bookIntro;
-
-    @ApiModelProperty("在读人数")
-    private Integer readNumber;
-
-    @ApiModelProperty("书籍封面地址")
-    private String bookCover;
-
-    @ApiModelProperty("书籍地址")
-    private String bookAddress;
-
-    @ApiModelProperty("书籍类型名称")
-    private String bookTypeName;
-
-    @ApiModelProperty("书籍类别 book.推书;magazine.杂志")
-    private String bookKind;
+    @ApiModelProperty("名言内容")
+    private String sayingContent;
 
     @ApiModelProperty("创建时间")
     private Date createTime;

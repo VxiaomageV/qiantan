@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * 书籍主表表 Feign Fallback Factory
  *
  * @author mal
- * @since 2020-11-30
+ * @since 2020-12-02
  */
 @Component
 public class BookClientFallbackFactory implements FallbackFactory<BookClient> {

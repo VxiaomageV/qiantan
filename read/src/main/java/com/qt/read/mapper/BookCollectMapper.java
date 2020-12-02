@@ -1,8 +1,8 @@
 package com.qt.read.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.qt.read.entity.Book;
-import com.qt.read.query.BookPageQuery;
+import com.qt.read.entity.BookCollect;
+import com.qt.read.query.BookCollectPageQuery;
 
 import org.springframework.stereotype.Repository;
 
@@ -12,13 +12,13 @@ import org.apache.ibatis.annotations.Param;
 import java.io.Serializable;
 
 /**
- * 书籍主表表 Mapper 接口
+ * 书籍收藏表 Mapper 接口
  *
  * @author mal
  * @since 2020-12-02
  */
 @Repository
-public interface BookMapper extends BaseMapper<Book> {
+public interface BookCollectMapper extends BaseMapper<BookCollect> {
 
 
 }

@@ -11,6 +11,7 @@ import com.qt.common.pagination.PageInfo;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.transaction.annotation.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -20,7 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * 书籍主表表 服务实现类
  *
  * @author mal
- * @since 2020-11-30
+ * @since 2020-12-02
  */
 @Slf4j
 @Service
@@ -51,6 +52,10 @@ public class BookServiceImpl extends BaseServiceImpl<BookMapper, Book> implement
     public Paging<Book> getBookPageList(BookPageQuery bookPageQuery) throws Exception {
         Page<Book> page = new PageInfo<>(bookPageQuery, OrderItem.desc(getLambdaColumn(Book::getCreateTime)));
         LambdaQueryWrapper<Book> wrapper = new LambdaQueryWrapper<>();
+        // 根据图书类型查询图书分页列表
+        if (StringUtils.isNotBlank(bookPageQuery.getBookTypeName())) {
+            wrapper.eq(Book::getBookTypeName, bookPageQuery.getBookTypeName());
+        }
         IPage<Book> iPage = bookMapper.selectPage(page, wrapper);
         return new Paging<Book>(iPage);
     }

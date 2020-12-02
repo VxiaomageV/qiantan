@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * 书籍主表表 Feign Client
  *
  * @author mal
- * @since 2020-11-30
+ * @since 2020-12-02
  */
 @FeignClient(name = "read", path = "/book", fallbackFactory = BookClientFallbackFactory.class, configuration = FeignConfiguration.class)
 public interface BookClient {

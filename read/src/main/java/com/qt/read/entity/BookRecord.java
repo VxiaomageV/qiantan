@@ -1,20 +1,21 @@
 package com.qt.read.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
+import java.util.Date;
 import com.qt.common.entity.BaseEntity;
-import com.qt.common.validator.groups.Update;
+import com.baomidou.mybatisplus.annotation.Version;
+import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
-
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
+import com.qt.common.validator.groups.Update;
 
 /**
- * 书籍主表表
+ * 书籍查看记录表
  *
  * @author mal
  * @since 2020-12-02
@@ -22,14 +23,20 @@ import java.util.Date;
 @Data
 @Accessors(chain = true)
 @EqualsAndHashCode(callSuper = true)
-@ApiModel(value = "Book对象")
-public class Book extends BaseEntity {
+@ApiModel(value = "BookRecord对象")
+public class BookRecord extends BaseEntity {
     private static final long serialVersionUID = 1L;
 
     @NotNull(message = "id不能为空", groups = {Update.class})
     @ApiModelProperty("id")
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
+
+    @ApiModelProperty("用户id")
+    private Long userId;
+
+    @ApiModelProperty("书籍id")
+    private Long bookId;
 
     @ApiModelProperty("书籍名称")
     private String bookName;
@@ -45,15 +52,6 @@ public class Book extends BaseEntity {
 
     @ApiModelProperty("书籍封面地址")
     private String bookCover;
-
-    @ApiModelProperty("书籍地址")
-    private String bookAddress;
-
-    @ApiModelProperty("书籍类型名称")
-    private String bookTypeName;
-
-    @ApiModelProperty("书籍类别 book.推书;magazine.杂志")
-    private String bookKind;
 
     @ApiModelProperty("创建时间")
     private Date createTime;

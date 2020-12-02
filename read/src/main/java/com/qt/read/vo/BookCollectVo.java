@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  * <pre>
- * 书籍主表表 查询结果对象
+ * 书籍收藏表 查询结果对象
  * </pre>
  *
  * @author mal
@@ -17,36 +17,27 @@ import java.util.Date;
  */
 @Data
 @Accessors(chain = true)
-@ApiModel(value = "Book对象")
-public class BookVo implements Serializable {
+@ApiModel(value = "BookCollect对象")
+public class BookCollectVo implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty("id")
     private Long id;
 
+    @ApiModelProperty("用户id")
+    private Long userId;
+
+    @ApiModelProperty("书籍id")
+    private Long bookId;
+
     @ApiModelProperty("书籍名称")
     private String bookName;
-
-    @ApiModelProperty("书籍作者")
-    private String bookAuthor;
-
-    @ApiModelProperty("书籍简介")
-    private String bookIntro;
-
-    @ApiModelProperty("在读人数")
-    private Integer readNumber;
 
     @ApiModelProperty("书籍封面地址")
     private String bookCover;
 
-    @ApiModelProperty("书籍地址")
-    private String bookAddress;
-
-    @ApiModelProperty("书籍类型名称")
-    private String bookTypeName;
-
-    @ApiModelProperty("书籍类别 book.推书;magazine.杂志")
-    private String bookKind;
+    @ApiModelProperty("书籍已阅比例")
+    private Float bookOver;
 
     @ApiModelProperty("创建时间")
     private Date createTime;

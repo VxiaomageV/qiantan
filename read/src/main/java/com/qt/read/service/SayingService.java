@@ -1,35 +1,35 @@
 package com.qt.read.service;
 
-import com.qt.read.entity.Book;
-import com.qt.read.query.BookPageQuery;
+import com.qt.read.entity.Saying;
+import com.qt.read.query.SayingPageQuery;
 import com.qt.common.service.BaseService;
 import com.qt.common.pagination.Paging;
 
 /**
- * 书籍主表表 服务类
+ * 名人名言表 服务类
  *
  * @author mal
  * @since 2020-12-02
  */
-public interface BookService extends BaseService<Book> {
+public interface SayingService extends BaseService<Saying> {
 
     /**
      * 保存
      *
-     * @param book
+     * @param saying
      * @return
      * @throws Exception
      */
-    boolean saveBook(Book book) throws Exception;
+    boolean saveSaying(Saying saying) throws Exception;
 
     /**
      * 修改
      *
-     * @param book
+     * @param saying
      * @return
      * @throws Exception
      */
-    boolean updateBook(Book book) throws Exception;
+    boolean updateSaying(Saying saying) throws Exception;
 
     /**
      * 删除
@@ -38,16 +38,16 @@ public interface BookService extends BaseService<Book> {
      * @return
      * @throws Exception
      */
-    boolean deleteBook(Long id) throws Exception;
+    boolean deleteSaying(Long id) throws Exception;
 
 
     /**
      * 获取分页对象
      *
-     * @param bookQueryParam
+     * @param sayingQueryParam
      * @return
      * @throws Exception
      */
-    Paging<Book> getBookPageList(BookPageQuery bookPageQuery) throws Exception;
+    Paging<Saying> getSayingPageList(SayingPageQuery sayingPageQuery) throws Exception;
 
 }

@@ -9,7 +9,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <pre>
- * 书籍主表表 分页查询对象
+ * 书籍查看记录表 分页查询对象
  * </pre>
  *
  * @author mal
@@ -18,10 +18,10 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 @EqualsAndHashCode(callSuper = true)
-@ApiModel(value = "书籍主表表分页查询")
-public class BookPageQuery extends BasePageOrderQuery {
+@ApiModel(value = "书籍查看记录表分页查询")
+public class BookRecordPageQuery extends BasePageOrderQuery {
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty("书籍类型名称")
-    private String bookTypeName;
+    @ApiModelProperty("用户id")
+    private Long userId;
 }
