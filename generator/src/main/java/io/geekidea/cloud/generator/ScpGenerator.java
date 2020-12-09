@@ -38,7 +38,7 @@ public class ScpGenerator {
                 .setFileOverride(true);
 
         // 设置表信息
-        generatorProperties.addTable("book_record", "id");
+        generatorProperties.addTable("comment_back", "id");
 
         // 设置表前缀
         // generatorProperties.setTablePrefix(Arrays.asList("tb_"));
